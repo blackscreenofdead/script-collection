@@ -21,16 +21,12 @@ echo "🌐 Unused networks:"
 docker network ls | grep "bridge" | grep -v "docker0"
 
 echo
-echo "💾 Unused volumes:"
-docker volume ls -f dangling=true
-
-echo
 read -p "⚠️ Proceed with cleanup (this will delete the above)? (yes/[no]): " confirm
 
 if [ "$confirm" = "yes" ]; then
     echo
     echo "🚀 Running: docker system prune -a --volumes"
-    docker system prune -a --volumes
+    docker system prune -a
     echo "✅ Done."
 else
     echo "❌ Aborted. Nothing was deleted."
