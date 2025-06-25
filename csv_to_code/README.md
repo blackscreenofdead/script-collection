@@ -16,4 +16,13 @@ A small shell script to convert simple CSV files into structured code blocks –
 ## 📥 Input Format
 
 CSV file (`test.csv`):
+<details>
+<summary>Click to show example output</summary>
 
+$(head -n 10 output.txt)
+
+bash
+Kopieren
+Bearbeiten
+
+</details>
