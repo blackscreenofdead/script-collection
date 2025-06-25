@@ -11,7 +11,7 @@ do
 
     {
         echo '  module "'$name'" {'
-        echo '    source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"'
+        echo '    source    = "git::https://gitlab.XXXX.com/terraform/module.example.git?ref=1.0.0"'
         echo '    name      = "'$name'"'
         echo '    subnet    = "'$ip'"'
         echo '    vdomparam = "vdom01"'
