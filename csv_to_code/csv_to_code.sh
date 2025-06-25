@@ -7,7 +7,7 @@ output_file="output.txt"
 > "$output_file"
 
 # CSV einlesen und verarbeiten
-cat name.csv | while read line
+cat test.csv | while read line
 do
     name=$(echo "$line" | cut -d ';' -f1)
     ip=$(echo "$line" | cut -d ';' -f2)
