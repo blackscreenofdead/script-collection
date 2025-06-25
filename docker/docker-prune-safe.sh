@@ -25,7 +25,7 @@ read -p "⚠️ Proceed with cleanup (this will delete the above)? (yes/[no]): "
 
 if [ "$confirm" = "yes" ]; then
     echo
-    echo "🚀 Running: docker system prune -a --volumes"
+    echo "🚀 Running: docker system prune -a"
     docker system prune -a
     echo "✅ Done."
 else
