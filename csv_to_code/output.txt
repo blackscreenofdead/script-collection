@@ -1,0 +1,13 @@
+  module "hello" {
+    source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"
+    name      = "hello"
+    subnet    = "123"
+    vdomparam = "vdom01"
+  }
+
+  module "bye" {
+    source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"
+    name      = "bye"
+    subnet    = "321"
+    vdomparam = "vdom01"
+  }
