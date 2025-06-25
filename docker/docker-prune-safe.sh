@@ -4,7 +4,6 @@ echo "🧼 This script will clean up Docker:"
 echo "- Stopped containers"
 echo "- Unused images (including untagged)"
 echo "- Unused networks"
-echo "- Unused volumes"
 echo
 echo "🕵️ Preview of what will be deleted:"
 
