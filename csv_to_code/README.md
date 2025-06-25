@@ -18,11 +18,20 @@ A small shell script to convert simple CSV files into structured code blocks –
 CSV file (`test.csv`):
 <details>
 <summary>Click to show example output</summary>
+'''
+  module "hello" {
+    source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"
+    name      = "hello"
+    subnet    = "123"
+    vdomparam = "vdom01"
+  }
 
-$(head -n 10 output.txt)
+  module "bye" {
+    source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"
+    name      = "bye"
+    subnet    = "321"
+    vdomparam = "vdom01"
+  }
 
-bash
-Kopieren
-Bearbeiten
-
+'''
 </details>
