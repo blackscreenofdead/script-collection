@@ -17,6 +17,5 @@ do
         echo '    vdomparam = "vdom01"'
         echo '  }'
         echo ''
-}
     } >> "$output_file"
 done
