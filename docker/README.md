@@ -20,7 +20,7 @@ Only after confirmation will the actual cleanup be performed.
 ## 🧪 Example usage
 
 ```bash
-wget https://github.com/blackscreenofdead/script-collection/edit/main/docker/docker-prune-safe.sh
+wget https://github.com/blackscreenofdead/script-collection/blob/main/docker/docker-prune-safe.sh
 chmod +x docker-prune-safe.sh
 ./docker-prune-safe.sh
 ```
