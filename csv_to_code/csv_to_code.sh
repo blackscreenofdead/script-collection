@@ -13,10 +13,13 @@ do
     ip=$(echo "$line" | cut -d ';' -f2)
 
     {
-        echo '  dstaddr {'
-        echo '    name = "'$name'"'
-        echo '    ip = "'$ip'"'
+        echo '  module "'$name'" {'
+        echo '    source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"'
+        echo '    name      = "'$name'"'
+        echo '    subnet    = "'$ip'"'
+        echo '    vdomparam = "vdom01"'
         echo '  }'
         echo ''
+}
     } >> "$output_file"
 done
