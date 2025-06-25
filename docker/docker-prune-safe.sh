@@ -1,14 +1,37 @@
 #!/bin/bash
 
-echo "⚠️  WARNING: This will remove all unused Docker containers, images, networks, and volumes."
-echo "It will not touch running containers, but stopped ones and dangling resources will be gone."
+echo "🧼 This script will clean up Docker:"
+echo "- Stopped containers"
+echo "- Unused images (including untagged)"
+echo "- Unused networks"
+echo "- Unused volumes"
 echo
-read -p "Are you sure you want to continue? (yes/[no]): " confirm
+echo "🕵️ Preview of what will be deleted:"
+
+echo
+echo "📦 Stopped containers:"
+docker container ls -a -f status=exited
+
+echo
+echo "🧱 Unused images:"
+docker images -f dangling=true
+
+echo
+echo "🌐 Unused networks:"
+docker network ls | grep "bridge" | grep -v "docker0"
+
+echo
+echo "💾 Unused volumes:"
+docker volume ls -f dangling=true
+
+echo
+read -p "⚠️ Proceed with cleanup (this will delete the above)? (yes/[no]): " confirm
 
 if [ "$confirm" = "yes" ]; then
-    echo "Running: docker system prune -a --volumes"
+    echo
+    echo "🚀 Running: docker system prune -a --volumes"
     docker system prune -a --volumes
-    echo "✅ Docker system cleaned."
+    echo "✅ Done."
 else
-    echo "❌ Aborted. Nothing was changed."
+    echo "❌ Aborted. Nothing was deleted."
 fi
