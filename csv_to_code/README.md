@@ -18,7 +18,7 @@ A small shell script to convert simple CSV files into structured code blocks –
 CSV file (`test.csv`):
 <details>
 <summary>Click to show example output</summary>
-'''
+```yaml
   module "hello" {
     source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"
     name      = "hello"
@@ -33,5 +33,5 @@ CSV file (`test.csv`):
     vdomparam = "vdom01"
   }
 
-'''
+```
 </details>
