@@ -15,13 +15,13 @@ A small shell script to convert simple CSV files into structured code blocks –
 
 ## 📥 Input Example
 CSV file (`test.csv`):
-```
+```csv
 hello;123
 bye;321
 ```
 ## 📤 Output Example
-CSV file (`output.txt`):
-```
+TXT file (`output.txt`):
+```tf
 module "hello" {
   source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"
   name      = "hello"
