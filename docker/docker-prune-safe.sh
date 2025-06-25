@@ -17,7 +17,7 @@ docker images -f dangling=true
 
 echo
 echo "🌐 Unused networks:"
-docker network ls | grep "bridge" | grep -v "docker0"
+docker network ls | grep -v "bridge\|host\|none"
 
 echo
 read -p "⚠️ Proceed with cleanup (this will delete the above)? (yes/[no]): " confirm
