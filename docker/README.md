@@ -23,7 +23,9 @@ Only after confirmation will the actual cleanup be performed.
 wget https://github.com/blackscreenofdead/script-collection/edit/main/docker/docker-prune-safe.sh
 chmod +x docker-prune-safe.sh
 ./docker-prune-safe.sh
-
+```
+## 🧪 Example Output
+```
 🧼 This script will clean up Docker:
 - Stopped containers
 - Unused images (including untagged)
