@@ -13,25 +13,27 @@ A small shell script to convert simple CSV files into structured code blocks –
 
 ---
 
-## 📥 Input Format
-
+## 📥 Input Example
 CSV file (`test.csv`):
-<details>
-<summary>Click to show example output</summary>
-```yaml
-  module "hello" {
-    source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"
-    name      = "hello"
-    subnet    = "123"
-    vdomparam = "vdom01"
-  }
-
-  module "bye" {
-    source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"
-    name      = "bye"
-    subnet    = "321"
-    vdomparam = "vdom01"
-  }
-
 ```
-</details>
+hello;123
+bye;321
+```
+## 📤 Output Example
+CSV file (`output.txt`):
+```
+module "hello" {
+  source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"
+  name      = "hello"
+  subnet    = "123"
+  vdomparam = "vdom01"
+}
+
+module "bye" {
+  source    = "git::https://gitlab.XXXX.com/terradorm/module.example.git?ref=1.0.0"
+  name      = "bye"
+  subnet    = "321"
+  vdomparam = "vdom01"
+}
+```
+
